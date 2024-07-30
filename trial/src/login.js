@@ -8,15 +8,16 @@ const LoginForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch('https://5000-sahil21goyat-reactmongo-w2c6ox8ww9w.ws-us115.gitpod.io/login', {
+        const response = await fetch("https://2e6b5aea-15bf-45ae-88ac-66c7b2467669-00-6vsod2z7hkov.sisko.replit.dev:5000/login", {
             method: 'POST',
             headers: {
+                Accept: 'application/json',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ email, password }),
         });
 
-        const result = await response.json();
+        const result =response;
         console.log(result);
     };
 
